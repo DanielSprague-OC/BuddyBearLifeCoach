@@ -1,0 +1,110 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<!--
+        Name: Daniel Sprague
+        V3 Due Date: 2019-05-21
+        File: contact.html
+        This is an assignment for CIS155. This is a version of the website project (V3) done throughout the quarter.
+        This specific page is to provide pricing and contact information.
+    -->
+	<title>Contact - Buddy-Bear's Life Coaching Services</title>
+	<meta name="keywords" content="coaching, dog, life, advice, Buddy-Bear, service, contact, pricing" />
+	<meta name="author" content="Daniel Sprague" />
+	<meta name="description"
+		content="The Contact page for Buddy-Bear's Life Coaching Services, a life coaching service ran by the two best dogs ever." />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="reset.css" rel="stylesheet" />
+	<link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+	<header>
+		<h1>Buddy-Bear's Life Coaching Services</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li>
+				<a href="blog.html" class="subHeader">Blog</a>
+				<ul class="submenu">
+					<li><a href="blog.html#rest">Rest, It's for Always</a></li>
+					<li><a href="blog.html#wheel">Take the Wheel of Your Life</a></li>
+				</ul>
+			</li>
+			<li id="biographies"><a href="#">Biographies [Coming Soon]</a></li>
+            <li id="bios"><a href="#">Bios</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</nav>
+	<section class="page_title">
+		<h2>Contact</h2>
+	</section>
+	<article>
+		<h3>Pricing</h3>
+		<p>Our basic pricing is as follows:</p>
+		<!--
+			M6LO3 Demonstrate how to create a table (HTML, explain table's purpose; it needs to be appropriate data for a table, and have at least 2 columns and 3 rows, appropriate use of thead/tbody/tfooter, and cells using th/td appropriately)
+			The following element is a table with two columns and six rows. The table has the three main row groups of thead, tbody, and tfoot. 
+			The thead is used for the labels at top identifying what is in the columns. The tbody is used for the main data, and the tfoot is used
+			for the label at the bottom with the information about the currency. th cells are used for the labels, while the td cells are used for the
+			information data.
+		-->
+		<table>
+			<thead>
+				<tr>
+					<th>Time</th>
+					<th>Price</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>30 Minutes</td>
+					<td>10</td>
+				</tr>
+				<tr>
+					<td>1 Hour</td>
+					<td>19</td>
+				</tr>
+				<tr>
+					<td>2 Hours</td>
+					<td>36</td>
+				</tr>
+				<tr>
+					<td>4 Hours</td>
+					<td>70</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<!--
+					M6LO4 Demonstrate how to span multiple rows or multiple columns in a table (HTML, document where you write HTML that causes a multi-row or multi-column span; say which one it is as well: row or column, or both)
+					The table data in the following table row spans two columns. This makes it go across the entirety of the table horizontally,
+					as the table is only two columns.
+				-->
+				<tr>
+					<td colspan="2">All prices in dog treats</td>
+				</tr>
+			</tfoot>
+		</table>
+		<p>For further pricing inquires or to hire us, contact us via one of the methods below:</p>
+		<dl>
+			<dt>Email</dt>
+			<dd><a href="mailto:BuddyBear@example.com">BuddyBear@example.com</a></dd>
+			<dt>Phone</dt>
+			<dd><a href="tel:+15555555555">(555) 555-5555</a></dd>
+			<dt>Address</dt>
+			<dd>
+				<address>123 SE Dog Avenue <br /> Pupperloo, Ontario</address>
+			</dd>
+		</dl>
+	</article>
+	<footer>
+		<address>
+			Buddy-Bear's Life Coaching Services &#128062; 123 SE Dog Avenue &#128062; Pupperloo, Ontario
+		</address>
+	</footer>
+</body>

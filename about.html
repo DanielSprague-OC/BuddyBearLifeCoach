@@ -1,0 +1,160 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <!--
+        Name: Daniel Sprague
+        V1 Due Date: 2019-04-23
+        V2 Due Date: 2019-05-07
+        V3 Due Date: 2019-05-21
+        File: about.html
+        This is an assignment for CIS155. This is a version of the website project (V3) done throughout the quarter.
+        This specific page is to describe the purpose of the assignment, give miscellaneous data about the assignment, and to provide a changelog.
+    -->
+    <title>About - Buddy-Bear's Life Coaching Services</title>
+    <meta name="keywords" content="coaching, dog, life, advice, Buddy-Bear, service, about" />
+    <meta name="author" content="Daniel Sprague" />
+    <meta name="description"
+        content="The About page for Buddy-Bear's Life Coaching Services, a life coaching service ran by the two best dogs ever." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="reset.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1>Buddy-Bear's Life Coaching Services</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li>
+                <a href="blog.html" class="subHeader">Blog</a>
+                <ul class="submenu">
+                    <li><a href="blog.html#rest">Rest, It's for Always</a></li>
+                    <li><a href="blog.html#wheel">Take the Wheel of Your Life</a></li>
+                </ul>
+            </li>
+            <li id="biographies"><a href="#">Biographies [Coming Soon]</a></li>
+            <li id="bios"><a href="#">Bios</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="page_title">
+        <h2>About</h2>
+    </section>
+    <article>
+        <p>
+            This website was written by Daniel Sprague for the purposes of the CIS 155 project.
+        </p>
+        <h3>Changelog</h3>
+        <h4>V3 2019-05-25</h4>
+        <div class="Changelog"> 
+            <p>This is the third version of the website. Within the HTML, a new "Contact" page was added. This page
+                includes a table and some basic content. In future versions, this page will include more (hopefully a
+                text input box if those are coming up). This page also got the new changelog entry that is being read
+                right now! Some
+                modifcations were made to the nav bar so that there is a pulldown menu and there is a different link
+                to the biographies on mobile because the desktop one was too long. Beyond that, it was mainly the
+                removal of the image map along with removals/additions of various id's and sections.</p>
+            <p>The CSS had the addition of a mobile layout. This included moving quite a bit of code to a desktop layout
+                section, and creating the code that makes the mobile website more streamlined. A pulldown menu was added
+                to the "Blog" button in the nav bar to directly go to individual blog posts. There were a few tweaks,
+                including a horizontal dividing bar on the footer and increasing the margins on articles. The CSS code
+                for tables was added, with the biggest thing being alternating colors for alternating rows of data and
+                adding borders to some cells. Columns and horizontal bars dividing the individual changelogs were added
+                on the "About" page. The aside on the blog is no longer fixed position, and is now a flexbox. When
+                the page gets wide enough, the figures will now display side-by-side instead of being vertical.</p>
+            <p>Once again, I held off on major refactors/design tweaks on the website. Git branches should make
+                refactoring significantly easier in case I mess anything up in the process (as I did once or twice
+                trying to do the refactors I did) so I decided to try to hold off for that. As such, the color scheme
+                will still need to be modified in future versions. It appears very bland on the mobile version, and
+                there is lots of white space on the desktop site. More code need to be moved into the desktop media
+                block in the CSS, as quite a few things only appear on the desktop site. A tablet mode should probably
+                also be added, as the site doesn't behave too well between widths of 400 and 800 pixels. I would
+                also like to make it such that the body of every page will be at least the height of the browser window
+                and still look okay. I was able to make it go from top to bottom, but the footer and spacing looked
+                weirder than the page ending part way down. There is also some wackiness regarding the pulldown menu. If
+                I choose to keep the menu in the final version, I would like to figure out exactly what is happening
+                there. The positioning is slightly off, and the width appears to be a percentage of the entire body even
+                though its parent also has a width set that the submenu should use as its width basing.
+            </p>
+        </div>
+        <h4>V2 2019-05-11</h4>
+        <div class="Changelog">
+            <p>
+                This is the second version of the website. The biggest addition in this version is the <a
+                    href="blog.html">Blog page</a> (blog.html). Note much content was changed on the home page. A few
+                things were removed from the first version due to just fulfilling requirements or becoming redundant
+                (most notably a picture of Lulu). The Home page should get a makeover before the final edition, but it
+                didn't make a ton of sense to do that now when a lot of new tools may be learned in V3 and V4 to
+                overhaul the Home page once again. The only significant change to the About page is the addition of this
+                changelog entry. The Blog HTML doesn't have anything too extraordinary in comparison to the HTML created
+                for other pages in V1. A lot of it is marked with classes or IDs to reference in the CSS and it does
+                make significant use of figures.
+            </p>
+            <p>
+                The CSS did get a fair overhaul. The first thing was creating a reset.css to create some base things
+                (mainly making sure everything was set as a border box) to ensure consistency across browsers. A lot of
+                old CSS was ripped out from the stylesheet. Some of this CSS was weird coloring stuff or minor changes
+                in order to fulfill requirements, and some of it was just changed (e.g. the styling for the nav ul was
+                completely changed due to now being able to float the li's). I also added some organization to the main
+                CSS stylesheet (styles.css) as it was getting annoying to work with the styles all scattered about. A
+                lot of manipulation was done with borders and margins/padding in this version. The browser developer
+                tools were massively helpful with this. Almost nothing specific to the Home and About pages occured
+                except for making sure that everything generally worked okay when changes were made to the CSS to modify
+                things on the Blog page. The Blog page got a lot of CSS work done. A lot of it lies in the layout. The
+                aside is an "About the Authors" section that is fixed, with the main article being the blog posts. The
+                aside being fixed did cause a few issues, creating a lot of manipulation regarding the height, width,
+                and margin. Beyond that, a lot of the modifications were little things like rounding a border or editing
+                the background. There is some mild manipulation with the placement and the transparency of the images in
+                the aside as well.
+            </p>
+            <p>
+                In the future, some more CSS clean-up should be done. Some of the code isn't very clean and could be
+                made
+                more specific, and there are probably some unnecessary lines from experimentation that never got
+                removed. Creating the Biography and Contact pages should also happen. The About and Home pages should
+                also get a makeover at some point. The lines seem far too wide right now, making things a bit harder to
+                read. Some of the layout does get messed up with much smaller or much larger screens (I am developing on
+                a 1920x1080 monitor) so that will also need to be fixed eventually.
+            </p>
+        </div>
+        <h4>V1 2019-04-23</h4>
+        <div class="Changelog">
+            <p>
+                This is the first version of the website. In this iteration, there are only two pages: Home (index.html)
+                and About (about.html). The content is fairly bare, with little extra content than required at the
+                moment due to general busy-ness. There is the list of life improvements, a picture of Buster and Lulu,
+                and a basic biography of each on the frontpage. There is a single acknowledgement on this page, and then
+                this very changelog for V1 that you are reading right now. Across the website, there is a footer with a
+                basic address and the header navigation bar with the two links to the two pages and the title of the
+                overall site. There is also an <a href="index.html#tips">ordered list</a>. I am not too sure if it
+                should stay in its current location, but it is there for now. A lot of the design is quite bad due to
+                mainly trying to fulfill the rules rather than thinking of layout and design at the moment.
+            </p>
+            <p>
+                The CSS creates several changes to the layout of the site. The main things were color and centering
+                headers. Before, none of the headers were centered. But after, now the h2 and h3's are all centered.
+                Before, none of the background was colored but now it's a cool greenish-grayish-blue. I also was able to
+                modify the look of a link in the Shout-outs/Acknowledgments section of this page.
+            </p>
+        </div>
+        <h3>Shout-outs/Acknowledgments</h3>
+        <p>
+            The Twitter account <a href="www.twitter.com/dog_feelings" id="twitter">Thoughts of Dog (@dog_feelings)</a>,
+            ran by Matt Nelson, was used as inspiration for some of the vibes involving dogs. Also shout-out to that
+            page for being generally fun.
+        </p>
+    </article>
+    <footer>
+        <address>
+            Buddy-Bear's Life Coaching Services &#128062; 123 SE Dog Avenue &#128062; Pupperloo, Ontario
+        </address>
+    </footer>
+</body>
+
+</html>

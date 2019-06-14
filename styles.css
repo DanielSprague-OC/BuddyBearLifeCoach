@@ -1,0 +1,438 @@
+@charset "utf-8";
+/*
+    Name: Daniel Sprague
+    V1 Due Date: 2019-04-23
+    V2 Due Date: 2019-05-07
+    V3 Due Date: 2019-05-21
+    File: styles.css
+    This is an assignment for CIS155. This is a version of the website project (V3) done throughout the quarter.
+    This document is the main css stylesheet for the website.
+*/
+
+/* Body Styles */
+
+body {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: lightblue;
+}
+
+body::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+/* Nav Styles */
+
+nav {
+    text-align: center;
+    float: left;
+    width: 100%;
+}
+
+/*
+    All the li's in the nav ul were floating. The li's were the only children of the ul, so then the ul was collapsing and having a content-area
+    height of 0. Here, an empty character is inserted after the floating elements so that the ul expands around the li, making the ul's margins
+    come into play in the website layout.
+*/
+nav>ul::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+nav>ul {
+    padding-left: 0px;
+}
+
+/*
+    Here, we float the li's to the left. This makes it so that every li will try to go to the left, but not overlap eachother. 
+    As there are five li's with a set width of 20% (of the body element), the five li's will span in a line across the body.
+*/
+nav>ul>li {
+    display: block;
+    float: left;
+    width: 20%;
+    height: 5%;
+    border-style: solid;
+    background-color: rgb(150, 200, 200);
+    background-color: hsl(180, 31.2%, 68.6%);
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+/* Header Styles */
+
+header h1 {
+    color: DarkBlue;
+    font-family: Tahoma, Geneva, sans-serif;
+    text-align: center;
+    text-shadow: yellow 2px 2px 5px;
+}
+
+/* Heading Styles */
+
+section.page_title {
+    margin-top: 50px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.8em;
+}
+
+h3 {
+    text-align: center;
+}
+
+h4 {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* Figure and Image Styles */
+
+article>figure#busterHomePage {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+figcaption {
+    text-align: center;
+}
+
+figure>img {
+    width: 100%;
+}
+
+/* Article Styles */
+
+section.blog_article {
+    margin-top: 10px;
+    border-style: solid;
+    border-width: 2px;
+}
+
+article#blog {
+    width: 72%;
+    margin-left: 1.5%;
+}
+
+section.blog_article img {
+    width: 100%;
+}
+
+article {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+/* Text Styles */
+
+p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+a#twitter {
+    font-size: .95em;
+    text-decoration: none;
+}
+
+a:active, a:hover {
+    text-decoration: none;
+}
+
+section.blog_article p {
+    font-size: 14pt;
+}
+
+/* HTML Styles */
+
+html {
+    background: url(dog_heart.png) repeat fixed, lightblue;
+}
+
+/* Footer Styles */
+
+/*
+    This gives the footer its own line at the bottom (although the fixed aside may mess with it on certain sizes of browser
+    windows as the clear does not check fixed elements.
+*/
+footer {
+    text-align: center;
+    clear: both;
+    margin-top: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: 1px solid black;
+}
+
+/* Tables Styles */
+
+/*
+    M6LO7 Demonstrate how to format a table with CSS (CSS, group your table styles together and note the overall impact they have on the HTML)
+    The first style makes a 3px border aroudn the entirety of the tables (so a single rectangle), collapses all the internal margins together to make the
+    borders join (using the rules for table border collapsing), centers the table on the page, sets the table width to be 30% of the article, and centers
+    the text inside each cell of the table. The second and third styles make each column 50% of the table, while the border styles create a center line 
+    when there are two columns with separate entries. The fourth style creates a border around the thead, effectively making a horizontal line between the
+    labels and the data. The fifth and sixth styles create alternating colors for alternating rows within the tbody. The final style creates a horizontal line
+    between the footer and the data.
+*/
+table {
+    border: 3px solid black;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    text-align: center;
+}
+
+th {
+    width: 50%;
+    border-right: 1px solid black;
+}
+
+td {
+    border-right: 1px solid black;
+    width: 50%;
+}
+
+thead {
+    border: 1px solid black;
+}
+
+/* The next two selectors alternate colors in the data cells*/
+tbody tr:nth-of-type(2n+1) {
+    background: rgb(180, 220, 210);
+}
+
+tbody tr:nth-of-type(2n) {
+    background: rgb(170, 210, 250);
+}
+
+tfoot {
+    border: 1px solid black;
+}
+
+/* List Styles */
+
+dt::after {
+    content: ":";
+}
+
+/* PC Styles */
+
+/*
+    M5LO3 Use media queries to format a page differently for phones vs. PCs. (CSS, note where these are in your CSS and describe the overall impact they have on the site)
+    Here, we use a media query to target anything larger than a phone! I moved anything here that conflicted with the phone CSS. All of the aside and submenu styles got moved in as well,
+    as in the phone version asides and submenus are turned off. Special body formatting to center the desktop body and allow the html background to show was also moved here, as in the
+    mobile version the body takes the entirety of the width of the screen. The "About" page is also split into columns on desktop, as well as disabling a button intended only for mobile.
+*/
+@media only screen and (min-width: 481px) {
+    
+    /* Body Styles */
+
+    body {
+        width: 75%;
+        min-width: 800px;
+        max-width: 1485px;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: solid;
+        border-width: 1px;
+        border-color: black;
+    }
+
+    /* Nav Styles */
+
+    /* Disables the shorter "Bios" page link */
+    nav li#bios {
+        display: none;
+    }
+
+    /* Div Styles */
+
+    div.Changelog {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+        widows: 3;
+        orphans: 3;
+        padding-bottom: 8px;
+        border-bottom: 1px dashed black;
+    }
+
+    /* Aside Styles */
+
+    /*
+    M5LO5 Demonstrate the use of flexboxes on a web page (CSS document where you use flexboxes; explain their impact on the page's layout; this can be a new page or a redo of an existing page)
+    This aside is a flexbox. Its main purpose is so that when the page gets wide enough, the two author bios are displayed side-by-side. The header does not change within the flexbox due to
+    grow and shrink being set to 0.
+    */
+    /*
+    M5LO7 Demonstrate use of properties of flexbox containers (CSS, document what flexbox container properties you use and their impacts, for one CSS selector using them)
+    There are two flexbox properties used here: flex-flow (a combination of two properties) and justify-content. flex-flow makes it such that the main axis runs
+    horizontally, and anything that cannot fit in the current will go down to the next row starting on the left. justify-content makes is such that space between elements
+    will be evenly distributed in the space between the elements and the space between the elements and the edge of the aside.
+    */
+    aside#blog_aside {
+        width: 25%;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        float: right;
+        border-style: solid;
+        border-color: black;
+        box-sizing: border-box;
+        clear: right;
+        background: radial-gradient(circle closest-side at center center, orange, lightblue);
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-justify-content: space-around;
+        justify-content: space-around;
+    }
+
+    /*
+    M5LO6 Demonstrate use of properties of flexbox items (CSS, document what flexbox item properties you use and their impacts, for one CSS selector using them)
+    This flex property sets the grow and shrink rate to 1 each. As there are three blocks in the aside (two figures and an aside) and the aside is set to neither
+    grow nor shrink, this means that the two figures will split all growth/shrinkage evenly between them. The basis is also small enough, that when the aside
+    reaches 400px wide (160*2+10*2*2) then figures will be displayed side-by-side.
+    */
+    aside figure {
+        margin: 11px 10px;
+        -webkit-flex: 1 1 120px;
+        flex: 1 1 160px;
+    }
+
+    aside h3 {
+        -webkit-flex: 0 0 100%;
+        flex: 0 0 100%;
+    }
+
+    /* Sets the width of the images to the width of the figure, effectively centering them when the figure is centered */
+    aside figure img {
+        width: 100%;
+    }
+
+    /* Submenu Styles */
+
+    /*
+        M5LO4 Use CSS for pull-down menus (or collapsible/expandable areas) (CSS, note where the menu is on your site and how it behaves)
+        The following four selectors all combine to create the CSS for a pull-down menu. This pull-down menu is found on the nav bar under
+        the "Blog" button and only displays when "Blog" or a submenu item is hovered.
+    
+       The first block makes the parent of the submenu be able to be an anchor of positioning for the pulldown. The second block is 
+       formatting for the list items within the submenu regarding borders and spacing. The third block deals with positioning and sizing
+        of the menu, as well as making it invisible except for when hovered. The fourth block makes the menu visible when hovered.
+    */
+    nav li.subHeader {
+        position: relative;
+    }
+
+    nav ul.submenu>li {
+        height: 5%;
+        border-style: solid;
+        background-color: rgb(152, 214, 214);
+        list-style-type: none;
+        box-sizing: border-box;
+    }
+
+    /* 
+        The width is of the entire <html> element. There is a way to make the % width be of the "Blog". The positioning also ignores 
+        the border of the blog button. I do not know quite why this is happening. This way works, but should be fixed in the future.
+    */
+    nav ul.submenu {
+        display: none;
+        position: absolute;
+        padding: 0px;
+        width: 16%;
+        border-width: 0px;
+    }
+
+    a.subHeader:hover+ul.submenu, ul.submenu:hover {
+        display: block;
+    }
+
+}
+
+/* Mobile Styles */
+
+/*
+    M5LO3 Use media queries to format a page differently for phones vs. PCs. (CSS, note where these are in your CSS and describe the overall impact they have on the site)
+    Here, we use a media query to target phones and give phones their own special layout! The biggest differences are that submenus and asides are disabled, and the body
+    takes up the entirety of the width of the phone screen. Other differences include making the blog images take up the entire width of the screen minus the border,
+    disabling an unnecessary image on the homepage, making tables wider, and enabling a shorter nav link. These changes make the website much more useable on mobile.
+*/
+@media only screen and (max-width: 480px) {
+    
+    /* Article Style */
+
+    article#blog {
+        width: 100%;
+        margin-left: 0px;
+    }
+    
+    /* Aside Styles */
+
+    aside {
+        display: none;
+    }
+    
+    /* Body Styles */
+
+    body {
+        width: 100%;
+        margin: 0px;
+    }
+
+    /* Figure Styles */
+
+    figure#busterHomePage {
+        display: none;
+    }
+
+    figure {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    /* Heading Styles */
+
+    article#blog > h3 {
+        display: none;
+    }
+
+    h1 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    /* Nav Styles */
+
+    nav li#biographies {
+        display: none;
+    }
+
+    /* Submenu Styles */
+
+    nav ul.submenu {
+        display: none;
+    }
+
+    /* Table Styles */
+
+    table {
+        width: 100%;
+    }
+}

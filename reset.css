@@ -1,0 +1,21 @@
+@charset "utf-8";
+/*
+    Name: Daniel Sprague
+	V2 Due Date: 2019-05-07
+	V3 Due Date: 2019-05-21
+    File: reset.css
+    This is an assignment for CIS155. This is a version of the website project (V3) done throughout the quarter.
+    This document is the reset css stylesheet, providing a few base rules that override the browser's to ensure consistent viewing.
+*/
+
+header, nav, article, aside, footer, figure, body, section {
+	display: block;
+}
+
+header, nav, body, ul, li, a, img, aside, footer, figure, article,
+section, link, title, body, h1, h2, h3, h4, p, ol, map, area,
+figcaption, table, thead, tfoot, tbody, td, th {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}

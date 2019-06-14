@@ -1,0 +1,1 @@
+This is the website project for CIS155 at Olympic College, made by Daniel Sprague. More information can be found on the "About" page of the website.
