@@ -230,12 +230,24 @@ dt::after {
     they will be cleared of their label on the left (as well as anything else that could be lurking on the left).
 */
 
+/*
+    M8LO10 Demonstrate a CSS animation or transition (CSS, identify which is being done and its impact on the rendered HTML; note it has to include a time aspect, not be immediate)
+    An animation is used on the form to make it fade in over two seconds on page load. This is done to draw attention to the form so that more people fill it out.
+*/
 form {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
     background: rgb(170, 210, 250);
     border: 1px solid black;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-play-state: running;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 div.twoColumn, div.oneColumn {
