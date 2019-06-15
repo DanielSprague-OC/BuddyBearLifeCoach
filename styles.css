@@ -309,13 +309,13 @@ div.videos {
 }
 
 video {
-    border: 1px solid black;
     /* The default was adding an extra pixel each way vertically */
     height: 360px;
 }
 
 video, iframe {
     box-shadow: 2px 2px 2px black;
+    border: 1px solid black;
 }
 
 /* PC Styles */
