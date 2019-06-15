@@ -274,6 +274,38 @@ legend {
     border-top: 0px;
 }
 
+/* Media Styles */
+/*
+    M8LO12 Demonstrate how to format media with CSS (CSS, group your media styles together and describe their overall impact on the media feature of your page)
+    Iframe styles are also grouped in here, as the iframe is a video as well (just not an HTML5 media video).
+    A 1 pixel border is added around the video, as well as a slight shadow. The height of the video
+    is also set at 360px as the video is 360px and the browser was displaying the clip at 362px instead
+    of 360px. Both the iframe and the video are thrown in a flex box so that they can be displayed
+    with even spacing horizontally, while also going on top of eachother when in a mobile layout.
+    Note that there aren't many styles one can apply to an HTML5 video.
+    Note also that there are slight additional sizing styles under the mobile section to ensure that
+    the video fits within the mobile screen.
+*/
+
+div.videos {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+}
+
+video {
+    border: 1px solid black;
+    /* The default was adding an extra pixel each way vertically */
+    height: 360px;
+}
+
+video, iframe {
+    box-shadow: 2px 2px 2px black;
+}
+
 /* PC Styles */
 
 @media only screen and (min-width: 481px) {
@@ -438,5 +470,12 @@ legend {
 
     table {
         width: 100%;
+    }
+
+    /* Video Styles */
+    
+    video, iframe {
+        max-width: 100%;
+        max-height: 225px;
     }
 }

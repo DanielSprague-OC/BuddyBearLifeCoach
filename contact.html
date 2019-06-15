@@ -98,6 +98,30 @@
                 <input id="submitButton" value="Submit This Survey" type="submit" \>
             </fieldset>
         </form>
+
+        <p>As a thanks for filling out the survey, here are some candid videos of us (Note: none contain audio):</p>
+        <div class="videos">
+            <!--
+                M8LO8 Demonstrate the use of the <video> element for embedding video in a Web page (HTML)
+                A video is displayed here of my dog sitting. The video is set to loop (as it is only two seconds)
+                and also display controls. It does not autoplay, so otherwise it would be rather difficult to play.
+                MP4 was chosen for the video as it seems to have the most support across browsers. If the video fails,
+                a fallback message will be displayed.
+            -->
+            <video controls loop>
+                <source src="LuluSitting.mp4" type="video/mp4" />
+                <p>If this message is showing, you need to update your browser to play this video.</p>
+            </video>
+            <!--
+                M8LO9  Demonstrate the use of the iframe element (HTML)
+                This is an iframe element to display a Youtube video of my dog embedded on the 
+                webpage. A slight border is added, and the height and width are set as well, as 
+                the book said to do that in the HTML instead of the CSS for unclarified reasons.
+            -->
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/j6X8n3A0EH8" frameborder="1"
+                allowfullscreen>
+            </iframe>
+        </div>
     </article>
     <footer>
         <address>
