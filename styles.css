@@ -178,15 +178,6 @@ footer {
 
 /* Tables Styles */
 
-/*
-    M6LO7 Demonstrate how to format a table with CSS (CSS, group your table styles together and note the overall impact they have on the HTML)
-    The first style makes a 3px border aroudn the entirety of the tables (so a single rectangle), collapses all the internal margins together to make the
-    borders join (using the rules for table border collapsing), centers the table on the page, sets the table width to be 30% of the article, and centers
-    the text inside each cell of the table. The second and third styles make each column 50% of the table, while the border styles create a center line 
-    when there are two columns with separate entries. The fourth style creates a border around the thead, effectively making a horizontal line between the
-    labels and the data. The fifth and sixth styles create alternating colors for alternating rows within the tbody. The final style creates a horizontal line
-    between the footer and the data.
-*/
 table {
     border: 3px solid black;
     border-collapse: collapse;
@@ -231,12 +222,6 @@ dt::after {
 
 /* PC Styles */
 
-/*
-    M5LO3 Use media queries to format a page differently for phones vs. PCs. (CSS, note where these are in your CSS and describe the overall impact they have on the site)
-    Here, we use a media query to target anything larger than a phone! I moved anything here that conflicted with the phone CSS. All of the aside and submenu styles got moved in as well,
-    as in the phone version asides and submenus are turned off. Special body formatting to center the desktop body and allow the html background to show was also moved here, as in the
-    mobile version the body takes the entirety of the width of the screen. The "About" page is also split into columns on desktop, as well as disabling a button intended only for mobile.
-*/
 @media only screen and (min-width: 481px) {
     
     /* Body Styles */
@@ -273,17 +258,6 @@ dt::after {
 
     /* Aside Styles */
 
-    /*
-    M5LO5 Demonstrate the use of flexboxes on a web page (CSS document where you use flexboxes; explain their impact on the page's layout; this can be a new page or a redo of an existing page)
-    This aside is a flexbox. Its main purpose is so that when the page gets wide enough, the two author bios are displayed side-by-side. The header does not change within the flexbox due to
-    grow and shrink being set to 0.
-    */
-    /*
-    M5LO7 Demonstrate use of properties of flexbox containers (CSS, document what flexbox container properties you use and their impacts, for one CSS selector using them)
-    There are two flexbox properties used here: flex-flow (a combination of two properties) and justify-content. flex-flow makes it such that the main axis runs
-    horizontally, and anything that cannot fit in the current will go down to the next row starting on the left. justify-content makes is such that space between elements
-    will be evenly distributed in the space between the elements and the space between the elements and the edge of the aside.
-    */
     aside#blog_aside {
         width: 25%;
         border-top-left-radius: 25px;
@@ -302,12 +276,6 @@ dt::after {
         justify-content: space-around;
     }
 
-    /*
-    M5LO6 Demonstrate use of properties of flexbox items (CSS, document what flexbox item properties you use and their impacts, for one CSS selector using them)
-    This flex property sets the grow and shrink rate to 1 each. As there are three blocks in the aside (two figures and an aside) and the aside is set to neither
-    grow nor shrink, this means that the two figures will split all growth/shrinkage evenly between them. The basis is also small enough, that when the aside
-    reaches 400px wide (160*2+10*2*2) then figures will be displayed side-by-side.
-    */
     aside figure {
         margin: 11px 10px;
         -webkit-flex: 1 1 120px;
@@ -327,10 +295,6 @@ dt::after {
     /* Submenu Styles */
 
     /*
-        M5LO4 Use CSS for pull-down menus (or collapsible/expandable areas) (CSS, note where the menu is on your site and how it behaves)
-        The following four selectors all combine to create the CSS for a pull-down menu. This pull-down menu is found on the nav bar under
-        the "Blog" button and only displays when "Blog" or a submenu item is hovered.
-    
        The first block makes the parent of the submenu be able to be an anchor of positioning for the pulldown. The second block is 
        formatting for the list items within the submenu regarding borders and spacing. The third block deals with positioning and sizing
         of the menu, as well as making it invisible except for when hovered. The fourth block makes the menu visible when hovered.
@@ -368,7 +332,6 @@ dt::after {
 /* Mobile Styles */
 
 /*
-    M5LO3 Use media queries to format a page differently for phones vs. PCs. (CSS, note where these are in your CSS and describe the overall impact they have on the site)
     Here, we use a media query to target phones and give phones their own special layout! The biggest differences are that submenus and asides are disabled, and the body
     takes up the entirety of the width of the phone screen. Other differences include making the blog images take up the entire width of the screen minus the border,
     disabling an unnecessary image on the homepage, making tables wider, and enabling a shorter nav link. These changes make the website much more useable on mobile.
