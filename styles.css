@@ -221,6 +221,59 @@ dt::after {
     content: ":";
 }
 
+/* Form Styles */
+/*
+    M7LO11 Demonstrate how to format a form with CSS (group your form styles together in your CSS file, and document their overall impact on the form)
+    Most of these changes are just spacing/sizing to make sure various buttons and labels are sized correctly with enough room to breathe. The background 
+    color of the whole form is also changed and borders are added around the form and the legend. The legend border makes it look like the legend drops 
+    down from the form border, which is neat. The submit button is also floated to the right. When textarea's are in the div to designate single columns,
+    they will be cleared of their label on the left (as well as anything else that could be lurking on the left).
+*/
+
+form {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(170, 210, 250);
+    border: 1px solid black;
+}
+
+div.twoColumn, div.oneColumn {
+    margin-bottom: 10px;
+}
+
+div.twoColumn > label {
+    margin-left: 20px;
+}
+
+div.oneColumn > textarea {
+    display: block;
+    clear: left;
+}
+
+textarea#suggestions {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 100px;
+    max-height: 300px;
+    max-width: 1000px;
+    min-width: 150px;
+}
+
+input#submitButton {
+    float: right;
+}
+
+legend {
+    padding: 10px;
+    margin: 0px;
+    border: 1px solid black;
+    border-top: 0px;
+}
+
 /* PC Styles */
 
 @media only screen and (min-width: 481px) {

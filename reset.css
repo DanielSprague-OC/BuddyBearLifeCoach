@@ -15,7 +15,8 @@ header, nav, article, aside, footer, figure, body, section {
 
 header, nav, body, ul, li, a, img, aside, footer, figure, article,
 section, link, title, body, h1, h2, h3, h4, p, ol, map, area,
-figcaption, table, thead, tfoot, tbody, td, th {
+figcaption, table, thead, tfoot, tbody, td, th, textarea, label,
+form, fieldset, legend, input {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
