@@ -4,8 +4,9 @@
     V1 Due Date: 2019-04-23
     V2 Due Date: 2019-05-07
     V3 Due Date: 2019-05-21
+    V4 Due Date: 2019-06-11
     File: styles.css
-    This is an assignment for CIS155. This is a version of the website project (V3) done throughout the quarter.
+    This is an assignment for CIS155. This is a version of the website project (V4) done throughout the quarter.
     This document is the main css stylesheet for the website.
 */
 
@@ -237,13 +238,6 @@ dt::after {
         border-color: black;
     }
 
-    /* Nav Styles */
-
-    /* Disables the shorter "Bios" page link */
-    nav li#bios {
-        display: none;
-    }
-
     /* Div Styles */
 
     div.Changelog {
@@ -379,12 +373,6 @@ dt::after {
     h1 {
         margin-top: 0px;
         margin-bottom: 0px;
-    }
-
-    /* Nav Styles */
-
-    nav li#biographies {
-        display: none;
     }
 
     /* Submenu Styles */
